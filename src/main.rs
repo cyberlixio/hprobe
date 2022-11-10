@@ -240,7 +240,7 @@ async fn main() {
         .for_each(|b| async {
             match b {
                 Ok((r, _res)) => println!("{}", r),
-                Err(e) => eprintln!("Got an error: {}", e),
+                Err(_) => println!(""),
             }
         })
         .await;
